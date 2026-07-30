@@ -1,1 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+    --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    --font-heading: var(--font-sans);
+
+    --color-chart-5: var(--chart-5);
+    --color-chart-4: var(--chart-4);
+    --color-chart-3: var(--chart-3);
+    --color-chart-2: var(--chart-2);
+    --color-chart-1: var(--chart-1);
+    --color-ring: var(--ring);
+    --color-input: var(--input);
+    --color-border: var(--border);
+    --color-destructive: var(--destructive);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-accent: var(--accent);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-muted: var(--muted);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-secondary: var(--secondary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-primary: var(--primary);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-popover: var(--popover);
+    --color-card-foreground: var(--card-foreground);
+    --color-card: var(--card);
+    --color-foreground: var(--foreground);
+    --color-background: var(--background);
+
+    /* SwiftLane brand palette, also exposed as its own named tokens below */
+    --color-brand: var(--brand);
+    --color-heading: var(--heading);
+    --color-success: var(--success);
+    --color-success-foreground: var(--success-foreground);
+    --color-warning: var(--warning);
+    --color-warning-foreground: var(--warning-foreground);
+    --color-danger: var(--danger);
+    --color-danger-foreground: var(--danger-foreground);
+    --color-bg: var(--background);
+    --color-surface: var(--card);
+    --color-text-primary: var(--foreground);
+    --color-text-secondary: var(--muted-foreground);
+
+    --radius-sm: calc(var(--radius) * 0.6);
+    --radius-md: calc(var(--radius) * 0.8);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) * 1.4);
+    --radius-2xl: calc(var(--radius) * 1.8);
+    --radius-3xl: calc(var(--radius) * 2.2);
+}
+
+:root {
+    /* SwiftLane Workflow AI brand palette — single source of truth.
+       Adjust hex values here to re-theme the whole dashboard. */
+    --background: #F7F9FB;
+    --foreground: #101828;
+    --card: #FFFFFF;
+    --card-foreground: #101828;
+    --popover: #FFFFFF;
+    --popover-foreground: #101828;
+    --primary: #0F2A47;
+    --primary-foreground: #FFFFFF;
+    --secondary: #EEF2F6;
+    --secondary-foreground: #101828;
+    --muted: #EEF2F6;
+    --muted-foreground: #667085;
+    --accent: #1E88A8;
+    --accent-foreground: #FFFFFF;
+    --destructive: #C4483A;
+    --destructive-foreground: #FFFFFF;
+    --border: #E4E7EC;
+    --input: #E4E7EC;
+    --ring: #1E88A8;
+
+    /* LeanTek AgentEdge sidebar brand blue (sampled from the logo) */
+    --brand: #0099FF;
+    /* Headings use the exact same blue as the sidebar/logo. */
+    --heading: var(--brand);
+
+    --success: #2E9E5B;
+    --success-foreground: #FFFFFF;
+    --warning: #D9A02C;
+    --warning-foreground: #FFFFFF;
+    --danger: #C4483A;
+    --danger-foreground: #FFFFFF;
+
+    --chart-1: #1E88A8;
+    --chart-2: #0F2A47;
+    --chart-3: #2E9E5B;
+    --chart-4: #D9A02C;
+    --chart-5: #C4483A;
+
+    --radius: 0.75rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    }
+  body {
+    @apply bg-background text-foreground;
+    }
+  html {
+    @apply font-sans;
+    }
+}
